@@ -1,0 +1,132 @@
+###### start to pretrain generator: 2023-04-30 10:54:24.934864
+    training lstmCore: 2023-04-30 10:54:27.426331
+      epoch: 0 loss: 4.411285638809204
+      epoch: 1 loss: 4.4105244159698485
+      epoch: 2 loss: 4.404815673828125
+###### start to pretrain discriminator: 2023-04-30 10:54:28.055755
+    training discriminator: 2023-04-30 10:54:28.156784
+      epoch: 0 loss: 0.78365258872509
+      epoch: 1 loss: 0.7243019074201584
+      epoch: 2 loss: 0.6931471824645996
+###### start to train adversarial net: 2023-04-30 10:54:31.105267
+batch: 0 : 2023-04-30 10:54:31.105267
+    training generator: 2023-04-30 10:54:33.579216
+      epoch: 0 loss: -66.70625305175781
+  iter_n_dis: 0 : 2023-04-30 10:54:33.593669
+    training discriminator: 2023-04-30 10:54:33.707250
+      epoch: 0 loss: 0.694549149274826
+      epoch: 1 loss: 0.6931471824645996
+      epoch: 2 loss: 0.6931471824645996
+  iter_n_dis: 1 : 2023-04-30 10:54:34.252735
+    training discriminator: 2023-04-30 10:54:34.359431
+      epoch: 0 loss: 0.7464585453271866
+      epoch: 1 loss: 0.6931471824645996
+      epoch: 2 loss: 0.6931471824645996
+  iter_n_dis: 2 : 2023-04-30 10:54:34.893890
+    training discriminator: 2023-04-30 10:54:35.004144
+      epoch: 0 loss: 0.6938223838806152
+      epoch: 1 loss: 0.6931471824645996
+      epoch: 2 loss: 0.6931471824645996
+batch: 1 : 2023-04-30 10:54:35.560692
+    training generator: 2023-04-30 10:54:38.012855
+      epoch: 0 loss: -66.53410339355469
+  iter_n_dis: 0 : 2023-04-30 10:54:38.016856
+    training discriminator: 2023-04-30 10:54:38.122012
+      epoch: 0 loss: 0.7688151955604553
+      epoch: 1 loss: 0.6931471824645996
+      epoch: 2 loss: 0.6931471824645996
+  iter_n_dis: 1 : 2023-04-30 10:54:38.647970
+    training discriminator: 2023-04-30 10:54:38.755778
+      epoch: 0 loss: 0.6931471824645996
+      epoch: 1 loss: 0.6931471824645996
+      epoch: 2 loss: 0.6931471824645996
+  iter_n_dis: 2 : 2023-04-30 10:54:39.275840
+    training discriminator: 2023-04-30 10:54:39.382274
+      epoch: 0 loss: 0.6950801074504852
+      epoch: 1 loss: 0.6931471824645996
+      epoch: 2 loss: 0.6931471824645996
+batch: 2 : 2023-04-30 10:54:39.946201
+    training generator: 2023-04-30 10:54:42.541680
+      epoch: 0 loss: -67.03414154052734
+  iter_n_dis: 0 : 2023-04-30 10:54:42.544680
+    training discriminator: 2023-04-30 10:54:42.655335
+      epoch: 0 loss: 0.6943156301975251
+      epoch: 1 loss: 0.6931471824645996
+      epoch: 2 loss: 0.6931471824645996
+  iter_n_dis: 1 : 2023-04-30 10:54:43.177779
+    training discriminator: 2023-04-30 10:54:43.290838
+      epoch: 0 loss: 0.8208274498581887
+      epoch: 1 loss: 0.7510730892419815
+      epoch: 2 loss: 0.6931471824645996
+  iter_n_dis: 2 : 2023-04-30 10:54:43.870816
+    training discriminator: 2023-04-30 10:54:43.977935
+      epoch: 0 loss: 0.6962632715702057
+      epoch: 1 loss: 0.6931471824645996
+      epoch: 2 loss: 0.6931471824645996
+###### training done: 2023-04-30 10:54:44.536250
+###### start to pretrain generator: 2023-04-30 11:00:40.257658
+    training lstmCore: 2023-04-30 11:00:41.101223
+      epoch: 0 loss: 4.357612609863281
+      epoch: 1 loss: 4.363239765167236
+      epoch: 2 loss: 4.358414649963379
+###### start to pretrain discriminator: 2023-04-30 11:00:41.343788
+    training discriminator: 2023-04-30 11:00:41.440127
+      epoch: 0 loss: 0.922622948884964
+      epoch: 1 loss: 0.8002152740955353
+      epoch: 2 loss: 0.7998635917901993
+###### start to train adversarial net: 2023-04-30 11:00:42.196085
+batch: 0 : 2023-04-30 11:00:42.196085
+    training generator: 2023-04-30 11:00:44.618803
+      epoch: 0 loss: -1136.353759765625
+  iter_n_dis: 0 : 2023-04-30 11:00:44.622803
+    training discriminator: 2023-04-30 11:00:44.731896
+      epoch: 0 loss: 0.9541103839874268
+      epoch: 1 loss: 0.827690839767456
+      epoch: 2 loss: 0.8172283470630646
+  iter_n_dis: 1 : 2023-04-30 11:00:44.900143
+    training discriminator: 2023-04-30 11:00:45.006231
+      epoch: 0 loss: 0.9368713200092316
+      epoch: 1 loss: 0.8257515132427216
+      epoch: 2 loss: 0.8164734244346619
+  iter_n_dis: 2 : 2023-04-30 11:00:45.170037
+    training discriminator: 2023-04-30 11:00:45.277561
+      epoch: 0 loss: 0.6931471824645996
+      epoch: 1 loss: 0.6931471824645996
+      epoch: 2 loss: 0.6931471824645996
+batch: 1 : 2023-04-30 11:00:45.444337
+    training generator: 2023-04-30 11:00:48.150279
+      epoch: 0 loss: -666.943603515625
+  iter_n_dis: 0 : 2023-04-30 11:00:48.155273
+    training discriminator: 2023-04-30 11:00:48.263202
+      epoch: 0 loss: 0.7076785564422607
+      epoch: 1 loss: 0.6931471824645996
+      epoch: 2 loss: 0.6931471824645996
+  iter_n_dis: 1 : 2023-04-30 11:00:48.432282
+    training discriminator: 2023-04-30 11:00:48.542623
+      epoch: 0 loss: 0.7098060548305511
+      epoch: 1 loss: 0.6931471824645996
+      epoch: 2 loss: 0.6931471824645996
+  iter_n_dis: 2 : 2023-04-30 11:00:48.714812
+    training discriminator: 2023-04-30 11:00:48.847372
+      epoch: 0 loss: 0.9340448975563049
+      epoch: 1 loss: 0.8094163835048676
+      epoch: 2 loss: 0.8098231106996536
+batch: 2 : 2023-04-30 11:00:49.017672
+    training generator: 2023-04-30 11:00:51.694863
+      epoch: 0 loss: -1125.0379638671875
+  iter_n_dis: 0 : 2023-04-30 11:00:51.698864
+    training discriminator: 2023-04-30 11:00:51.810943
+      epoch: 0 loss: 0.7165990173816681
+      epoch: 1 loss: 0.6931471824645996
+      epoch: 2 loss: 0.6931471824645996
+  iter_n_dis: 1 : 2023-04-30 11:00:52.000441
+    training discriminator: 2023-04-30 11:00:52.249617
+      epoch: 0 loss: 0.9444969892501831
+      epoch: 1 loss: 0.807666003704071
+      epoch: 2 loss: 0.8072091042995453
+  iter_n_dis: 2 : 2023-04-30 11:00:52.451193
+    training discriminator: 2023-04-30 11:00:52.683288
+      epoch: 0 loss: 0.936772346496582
+      epoch: 1 loss: 0.8211917132139206
+      epoch: 2 loss: 0.8141339868307114
+###### training done: 2023-04-30 11:00:52.869596
