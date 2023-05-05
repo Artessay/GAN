@@ -1,15 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Dec  9 23:10:00 2018
-@author: natnij
-
-Based on SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient,
-    Lantao Yu, Weinan Zhang, Jun Wang, Yong Yu.
-    Paper available here: https://arxiv.org/abs/1609.05473
-Translated from the original tensorflow repo:
-    https://github.com/LantaoYu/SeqGAN, and adjusted for wider usability.
-Many thanks to the original authors.
-"""
 from datetime import datetime
 import torch
 import torch.nn as nn
