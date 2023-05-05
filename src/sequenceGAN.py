@@ -1,15 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Dec 10 21:16:41 2018
-@author: natnij
-
-Based on SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient, 
-    Lantao Yu, Weinan Zhang, Jun Wang, Yong Yu.
-    Paper available here: https://arxiv.org/abs/1609.05473
-Translated from the original tensorflow repo: 
-    https://github.com/LantaoYu/SeqGAN, and adjusted for wider usability.
-Many thanks to the original authors. 
-"""
 import sys
 from datetime import datetime
 import torch
@@ -44,17 +32,25 @@ def train_discriminator_wrapper(x, x_gen, batch_size=1, vocab_size=10):
     return discriminator
 
 def main(batch_size, num=None):
+    '''
+    参数设置
+    '''
     if batch_size is None:
         batch_size = 1
+    
     x, vocabulary, reverse_vocab, sentence_lengths = read_sampleFile(num=num)
     if batch_size > len(x):
         batch_size = len(x)
+    
     start_token = vocabulary['START']
     end_token = vocabulary['END']
     pad_token = vocabulary['PAD']
     ignored_tokens = [start_token, end_token, pad_token]
     vocab_size = len(vocabulary)
     
+    '''
+    模型预训练
+    '''
     log = openLog()
     log.write("###### start to pretrain generator: {}\n".format(datetime.now()))
     log.close()
@@ -64,6 +60,7 @@ def main(batch_size, num=None):
                     batch_size=batch_size,vocab_size=vocab_size)
     x_gen = generator.generate(start_token=start_token, ignored_tokens=ignored_tokens,
                                batch_size=len(x))
+    
     log = openLog()
     log.write("###### start to pretrain discriminator: {}\n".format(datetime.now()))
     log.close()
@@ -72,6 +69,9 @@ def main(batch_size, num=None):
     rollout = torch.nn.DataParallel(rollout)#, device_ids=[0])
     rollout.to(DEVICE)
 
+    '''
+    模型训练
+    '''
     log = openLog()
     log.write("###### start to train adversarial net: {}\n".format(datetime.now()))
     log.close()
@@ -117,7 +117,6 @@ def main(batch_size, num=None):
 #    words_all = decode(num, reverse_vocab, log)
 #    print(words_all)
 
-#%%
 if __name__ == '__main__':
     try:
         batch_size = int(sys.argv[1])

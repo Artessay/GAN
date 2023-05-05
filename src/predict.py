@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Dec 20 11:14:08 2018
-"""
 import sys
 import torch
 from config import PATH, openLog

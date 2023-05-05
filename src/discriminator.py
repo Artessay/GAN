@@ -1,8 +1,4 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Dec  4 11:22:35 2018
-@author: natnij
-
 Based on SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient, 
     Lantao Yu, Weinan Zhang, Jun Wang, Yong Yu.
     Paper available here: https://arxiv.org/abs/1609.05473

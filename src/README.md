@@ -13,5 +13,5 @@ python sequenceGAN.py
 生成预测文本
 
 ```
-python sequenceGAN_generate.py
+python predict.py
 ```
