@@ -43,4 +43,16 @@ Allocated:0.0GB
 Cached:   0.0GBdatetime:2023-05-05 21:34:55.650031, device name:NVIDIA GeForce RTX 3050 Laptop GPU
 Memory Usage:
 Allocated:0.0GB
+Cached:   0.0GBdatetime:2023-05-05 21:48:55.951430, device name:NVIDIA GeForce RTX 3050 Laptop GPU
+Memory Usage:
+Allocated:0.0GB
+Cached:   0.0GBdatetime:2023-05-05 22:01:13.159861, device name:NVIDIA GeForce RTX 3050 Laptop GPU
+Memory Usage:
+Allocated:0.0GB
+Cached:   0.0GBdatetime:2023-05-06 14:34:01.956650, device name:NVIDIA GeForce RTX 3050 Laptop GPU
+Memory Usage:
+Allocated:0.0GB
+Cached:   0.0GBdatetime:2023-05-06 16:55:50.135712, device name:NVIDIA GeForce RTX 3050 Laptop GPU
+Memory Usage:
+Allocated:0.0GB
 Cached:   0.0GB

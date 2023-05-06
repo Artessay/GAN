@@ -1,0 +1,4 @@
+generated text: tensor([[ 0, 59, 56, 30, 16, 16, 53, 64, 75, 48, 24, 34, 56, 59,  8, 56, 59, 22,
+         26, 67,  5]], device='cuda:0', dtype=torch.int32)
+generated text: tensor([[ 0,  9, 55, 31, 46,  1,  4, 76, 57,  4, 52,  3, 41, 23, 14,  5, 59, 45,
+         53, 64, 45]], device='cuda:0', dtype=torch.int32)
