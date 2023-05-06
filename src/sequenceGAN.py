@@ -113,6 +113,7 @@ def main(batch_size, num=None):
 
     log = openLog('genTxt.txt')
     num = generator.generate(batch_size=batch_size)
+    log.write('generated text: {}\n'.format(num))
     log.close()
 #    words_all = decode(num, reverse_vocab, log)
 #    print(words_all)

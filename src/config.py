@@ -15,7 +15,7 @@ GEN_NUM_EPOCH = 30
 GEN_NUM_EPOCH_PRETRAIN = 10
 GEN_HIDDEN_DIM = 48
 ROLLOUT_ITER = 16
-TOTAL_BATCH = 10
+TOTAL_BATCH = 50
 
 DEVICE = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 NrGPU = 0

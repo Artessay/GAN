@@ -28,11 +28,17 @@ class LSTMCore(nn.Module):
                 torch.empty(batch_size, 1, 48, device=DEVICE).normal_())
 
     def forward(self, sentence, hidden, sentence_lengths=None):
+        # UserWarning: RNN module weights are not part of single contiguous chunk of memory. 
+        # This means they need to be compacted at every call, possibly greatly increasing memory usage. 
+        # To compact weights again call flatten_parameters(). 
+        self.lstm.flatten_parameters()
+
         # sentence dim: (batch_size, maximum sentence length)        
         if len(sentence.shape) == 1:
             sentence = sentence.view(1,sentence.shape[0])
         if sentence_lengths is None:
             sentence_lengths = torch.LongTensor([sentence.shape[1]] * len(sentence))
+
         # pack_padded_sequence is not compatible with DataParallel.
         # it needs to be a cpu tensor, and in runtime the model's forward
         # does not slice the cpu tensor as it does the layer's input tensors.
@@ -50,6 +56,7 @@ class LSTMCore(nn.Module):
         lstm_out, _ = torch.nn.utils.rnn.pad_packed_sequence(lstm_out, batch_first=True, total_length=sentence.shape[1])
         tag_space = self.hidden2tag(lstm_out)        
         tag_scores = self.logSoftmax(tag_space)
+
         return tag_scores, tag_space
 
 def pretrain_LSTMCore(train_x=None, sentence_lengths=None, batch_size=1, end_token=None, vocab_size=10):
