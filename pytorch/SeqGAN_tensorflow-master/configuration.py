@@ -28,7 +28,7 @@ class discriminator_config(object):
         
 class training_config(object):
      """Wrapper class for parameters for training"""
-        
+    
     def __init__(self):
         self.gen_learning_rate = 0.01 #learning rate of generator
         self.gen_update_time = 1 #update times of generator in adversarial training
