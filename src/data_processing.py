@@ -81,4 +81,5 @@ def decode(token_tbl, reverse_vocab, log=None):
         words_all.append(words[1:])
         if log is not None:
             log.write(''.join(words[1:])+'\n')
+    
     return words_all

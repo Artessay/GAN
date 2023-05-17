@@ -90,7 +90,7 @@ class Example(object):
 
         article = review_sentence[0]
         article_words = article.split()  # list of strings
-        if len(article_words) > hps.max_enc_steps:
+        if len(article_words) > (hps.max_enc_steps):
 
             article_words = article_words[:hps.max_enc_steps]
         self.enc_len = len(article_words)  # store the length after truncation but before padding

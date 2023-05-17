@@ -40,8 +40,8 @@ from result_evaluate import Evaluate
 import util
 import re
 
-import nltk
-from tensorflow.python import debug as tf_debug
+# import nltk
+# from tensorflow.python import debug as tf_debug
 
 FLAGS = tf.app.flags.FLAGS
 
