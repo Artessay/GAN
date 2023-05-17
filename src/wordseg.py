@@ -6,7 +6,10 @@ from config import PATH, SEQ_LENGTH
 def wordseg(x, pad_token='PAD'):
     try:
         text = list(jieba.cut(x))
+        print(text)
         text = [w for w in text if w not in ['\n',' ']]
+        print(text)
+        print(len(text))
     except:
         text = []
     if len(text) <= SEQ_LENGTH-1:

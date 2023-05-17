@@ -16,7 +16,7 @@
 
 """This file contains code to process data into batches"""
 
-import queue
+# import queue
 from random import shuffle
 import codecs
 import json

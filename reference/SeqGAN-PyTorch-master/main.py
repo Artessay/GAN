@@ -21,30 +21,39 @@ from rollout import Rollout
 from data_iter import GenDataIter, DisDataIter
 # ================== Parameter Definition =================
 
-parser = argparse.ArgumentParser(description='Training Parameter')
-parser.add_argument('--cuda', action='store', default=None, type=int)
-opt = parser.parse_args()
-print(opt)
+# parser = argparse.ArgumentParser(description='Training Parameter')
+# parser.add_argument('--cuda', action='store', default=None, type=int)
+# opt = parser.parse_args()
+# print(opt)
 
 # Basic Training Paramters
 SEED = 88
 BATCH_SIZE = 64
-TOTAL_BATCH = 200
+TOTAL_BATCH = 50 # 200
 GENERATED_NUM = 10000
-POSITIVE_FILE = 'real.data'
-NEGATIVE_FILE = 'gene.data'
-EVAL_FILE = 'eval.data'
+POSITIVE_FILE = 'real.txt' # 'real.data'
+NEGATIVE_FILE = 'gene.txt' # 'gene.data'
+EVAL_FILE = 'eval.txt' # 'eval.data'
 VOCAB_SIZE = 5000
-PRE_EPOCH_NUM = 120
+PRE_EPOCH_NUM = 20 # 120
 
-if opt.cuda is not None and opt.cuda >= 0:
-    torch.cuda.set_device(opt.cuda)
+# if opt.cuda is not None and opt.cuda >= 0:
+#     torch.cuda.set_device(opt.cuda)
+#     opt.cuda = True
+
+opt = argparse.Namespace()
+if torch.cuda.is_available():
+    torch.cuda.set_device(0)
     opt.cuda = True
+else:
+    opt.cuda = False
+
+print(opt)
 
 # Genrator Parameters
 g_emb_dim = 32
 g_hidden_dim = 32
-g_sequence_len = 20
+g_sequence_len = 116 # 20
 
 # Discriminator Parameters
 d_emb_dim = 64
@@ -148,8 +157,8 @@ def main():
         target_lstm = target_lstm.cuda()
     
     # Generate toy data using target lstm
-    print('Generating data ...')
-    generate_samples(target_lstm, BATCH_SIZE, GENERATED_NUM, POSITIVE_FILE)
+    # print('Generating data ...')
+    # generate_samples(target_lstm, BATCH_SIZE, GENERATED_NUM, POSITIVE_FILE)
 
     # Load data from file
     gen_data_iter = GenDataIter(POSITIVE_FILE, BATCH_SIZE)
@@ -229,5 +238,6 @@ def main():
             dis_data_iter = DisDataIter(POSITIVE_FILE, NEGATIVE_FILE, BATCH_SIZE)
             for _ in range(2):
                 loss = train_epoch(discriminator, dis_data_iter, dis_criterion, dis_optimizer)
+
 if __name__ == '__main__':
     main()
